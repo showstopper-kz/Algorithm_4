@@ -1,25 +1,23 @@
-package Chapter_2._1_2;
+package Chapter_2._1_6;
 
 import Chapter_2._1_1.Example;
-import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
-
 /**
- * 选择排序
+ * 希尔排序
  */
 
-public class Selection {
+public class Shell  {
     public static void sort(Comparable[] a){
         int N=a.length;
-        for (int i = 0; i < N; i++) {
-            int min=i;
-            for(int j=i+1;j<N;j++) if(less(a[j],a[min])) min=j;
-            exch(a,i,min);
+        int h=1;
+        while(h<N) h=3*h+1;
+        while(h>=1) {
+            for (int i = h; i < N; i++) {
+                for(int j=i;j>h&&less(a[j],a[j-h]);j-=h)
+                    exch(a,j,j-h);
+            }
         }
     }
 
@@ -42,13 +40,9 @@ public class Selection {
     }
 
     public static void main(String args[]){
-        Scanner sc= null;
-        String a[]=new String[5];
-        for (int i = 0; i < 5; i++) {
-            a[i]=sc.nextLine();
-        }
+        String[] a= StdIn.readAllStrings();
         sort(a);
-        assert isSorted(a);
+        assert isSorted(a);//若数组被成功排序，则继续执行
         show(a);
     }
 }

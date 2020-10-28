@@ -3,7 +3,7 @@ package Chapter_2._1_1;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
-public class Example {
+public abstract class Example {
     public static void sort(Comparable[] a){
 
     }
@@ -32,4 +32,5 @@ public class Example {
         assert isSorted(a);//若数组被成功排序，则继续执行
         show(a);
     }
+
 }
