@@ -3,6 +3,9 @@ package Chapter_4._1_2;
 import edu.princeton.cs.algs4.Bag;
 import edu.princeton.cs.algs4.In;
 
+/**
+ * 无向图构造
+ */
 public class Graph {
     private final int V;  //顶点数目
     private int E;        //边的数目
