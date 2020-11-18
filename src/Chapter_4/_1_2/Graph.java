@@ -31,6 +31,7 @@ public class Graph {
 
     public int V() { return V; }
     public int E() { return E; }
+    //加入边
     public void addEdge(int v,int w){
         adj[v].add(w);
         adj[w].add(v);

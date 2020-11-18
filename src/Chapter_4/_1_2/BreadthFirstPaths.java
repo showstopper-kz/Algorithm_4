@@ -18,8 +18,8 @@ public class BreadthFirstPaths {
         this.s = s;
 
     }
-
-    private void bgs(Graph g,int s){
+    //广度搜索
+    private void bfs(Graph g,int s){
         Queue<Integer> queue = new LinkedList<>();
         marked[s] = true;
         queue.add(s);
@@ -35,7 +35,7 @@ public class BreadthFirstPaths {
     }
 
     public boolean hasPathTo(int v) {return marked[v];}
-
+    //返回背包
     public Iterable<Integer> pathTo(int v){
         if( !hasPathTo(v) ) return null;
         Stack<Integer> path = new Stack<>();

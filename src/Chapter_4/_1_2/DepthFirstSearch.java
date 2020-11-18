@@ -8,7 +8,7 @@ public class DepthFirstSearch {
     public DepthFirstSearch(Graph g,int s){
         marked = new boolean[g.V()];
     }
-
+    //深度搜索
     private void dfs(Graph g,int v){
         marked[v] = true;
         count++;
