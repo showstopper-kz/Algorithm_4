@@ -54,6 +54,8 @@ public class CC {
                 StdOut.print(v+" ");
             System.out.println();
         }
+        Cycle cycle=new Cycle(g);
+        System.out.println(cycle.getHasCycle());
 
     }
 }
