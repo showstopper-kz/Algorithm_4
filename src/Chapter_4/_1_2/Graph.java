@@ -1,7 +1,10 @@
 package Chapter_4._1_2;
 
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 import edu.princeton.cs.algs4.Bag;
 import edu.princeton.cs.algs4.In;
+
+import java.util.Scanner;
 
 /**
  * 无向图构造
@@ -18,13 +21,12 @@ public class Graph {
             adj[v] = new Bag<Integer>();
     }
 
-    public Graph(In in){
-        this(in.readInt());
-        int E = in.readInt();
-
+    public Graph(Scanner in){
+        this(in.nextInt());
+        int E = in.nextInt();
         for(int i = 0;i < E;i++){
-            int v = in.readInt();
-            int w = in.readInt();
+            int v = in.nextInt();
+            int w = in.nextInt();
             addEdge(v,w);
         }
     }
@@ -39,4 +41,5 @@ public class Graph {
     }
 
     public Iterable<Integer> adj(int v){ return adj[v]; }
+
 }
