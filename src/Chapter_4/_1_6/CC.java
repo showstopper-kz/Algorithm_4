@@ -58,6 +58,6 @@ public class CC {
         }
         Cycle cycle=new Cycle(g);
         System.out.println(cycle.getHasCycle());
-
+        System.out.println(g.E());
     }
 }

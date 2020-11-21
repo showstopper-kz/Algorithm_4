@@ -1,8 +1,5 @@
 package Chapter_4._1_2;
 
-import edu.princeton.cs.algs4.In;
-import org.omg.PortableInterceptor.INACTIVE;
-
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
