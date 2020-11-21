@@ -24,6 +24,7 @@ public class Graph {
     public Graph(Scanner in){
         this(in.nextInt());
         int E = in.nextInt();
+
         for(int i = 0;i < E;i++){
             int v = in.nextInt();
             int w = in.nextInt();

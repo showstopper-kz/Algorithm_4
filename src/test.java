@@ -4,7 +4,7 @@ import edu.princeton.cs.algs4.StdOut;
 
 public class test {
     public static void main(String[] args) {
-        int N=100;
+        /*int N=100;
         StdDraw.setXscale(0,N);
         StdDraw.setYscale(0,N*N);
         StdDraw.setPenRadius(0.01);
@@ -12,6 +12,7 @@ public class test {
             StdDraw.point(i,i);
             StdDraw.point(i,i*i);
             StdDraw.point(i,i*Math.log(i));
-        }
+        }*/
+        System.out.println("hello,AliCloud");
     }
 }
