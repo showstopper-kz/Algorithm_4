@@ -2,10 +2,11 @@ package Chapter_4._2_2;
 
 
 import edu.princeton.cs.algs4.Bag;
-import edu.princeton.cs.algs4.In;
-
 import java.util.Scanner;
 
+/**
+ * construct the directed graph
+ */
 public class Digraph {
     private final int V;
     private int E;
@@ -25,7 +26,7 @@ public class Digraph {
         for (int i = 0; i < E; i++) {
             int v = in.nextInt();
             int w = in.nextInt();
-            addEdge(w,v);
+            addEdge(v,w);
         }
     }
 
@@ -33,7 +34,7 @@ public class Digraph {
     public int E(){return E;}
 
     public void addEdge(int v,int w){
-        adj[v].add(w);
+        adj[v].add(w);//v -> w
         E++;
     }
 

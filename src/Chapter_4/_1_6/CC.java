@@ -2,7 +2,6 @@ package Chapter_4._1_6;
 
 import Chapter_4._1_2.Graph;
 import edu.princeton.cs.algs4.Bag;
-import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdOut;
 
 import java.util.Scanner;
