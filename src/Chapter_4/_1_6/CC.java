@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class CC {
     //判断顶点是否被访问
     private boolean[] marked;
-    //第i个的值代表是第几个子图
+    //标记属于第几个子图
     private int[] id;
     private int count;
     public CC(Graph g){

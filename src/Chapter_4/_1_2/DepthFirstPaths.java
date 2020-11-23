@@ -25,7 +25,7 @@ public class DepthFirstPaths {
     }
 
     public boolean hasPathTo(int v){return marked[v];}
-
+    //返回起点到v的路径
     public Iterable<Integer> pathTo(int v){
         if( !hasPathTo(v) ) return null;
         Stack<Integer> path = new Stack<>();

@@ -24,7 +24,7 @@ public class Cycle {
         marked[v] = true;
         for(int w:g.adj(v)){
             if(!marked[w]) dfs(g,w,v);
-            else if(w != u) hasCycle = true;
+            else if(w != u) hasCycle = true;//不是上一个节点的已访问节点
         }
     }
 }
