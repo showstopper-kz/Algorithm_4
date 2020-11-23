@@ -6,6 +6,9 @@ import edu.princeton.cs.algs4.StdOut;
 
 import java.util.Scanner;
 
+/**
+ * 给定起点，通过检查marked数组返回能到达的路径
+ */
 public class DirectedDFS {
     private boolean marked[];
 

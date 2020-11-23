@@ -12,6 +12,7 @@ public class DirectedCycle {
     private boolean[] marked;
     private int[] edgeTo;
     private Stack<Integer> cycle;
+    //标记此个路径访问过的节点
     private boolean[] onStack;
 
     public DirectedCycle(Digraph g){

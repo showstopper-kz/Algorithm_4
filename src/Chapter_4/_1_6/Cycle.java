@@ -2,8 +2,8 @@ package Chapter_4._1_6;
 
 import Chapter_4._1_2.Graph;
 
-/*
-
+/**
+ * 判断是否有环
  */
 public class Cycle {
     private boolean []marked;

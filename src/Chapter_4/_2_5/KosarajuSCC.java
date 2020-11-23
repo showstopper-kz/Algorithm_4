@@ -10,6 +10,7 @@ public class KosarajuSCC {
     public KosarajuSCC(Digraph g){
         marked = new boolean[g.V()];
         id = new int[g.V()];
+        //取得反向图的逆后序排列
         DepthFirstOrder order = new DepthFirstOrder(g.reverse());
         for(int s:order.getReversePost())
             if (!marked[s])

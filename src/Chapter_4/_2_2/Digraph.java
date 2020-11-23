@@ -40,6 +40,7 @@ public class Digraph {
 
     public Iterable<Integer> adj(int V){return adj[V];}
 
+    //将图反向
     public Digraph reverse(){
         Digraph R = new Digraph(V);
         for(int v=0;v < V;v++)
