@@ -10,8 +10,11 @@ import java.util.Stack;
  */
 public class DepthFirstOrder {
     private boolean[] marked;
+    //前序
     private Queue<Integer> pre;
+    //后序
     private Queue<Integer> post;
+    //逆后序(拓扑排序)
     private Stack<Integer> reversePost;
 
     public DepthFirstOrder(Digraph g){
