@@ -1,10 +1,11 @@
 package Chapter_4._3_2;
 
-
 import edu.princeton.cs.algs4.Bag;
-
 import java.util.Scanner;
 
+/**
+ * 带权无向图
+ */
 public class EdgeWeightedGraph {
     private final int V;
     private int E;
@@ -42,7 +43,7 @@ public class EdgeWeightedGraph {
     }
     
     public Iterable<Edge> adj(int v){return adj[v];}
-    
+    //返回图中所有边
     public Iterable<Edge> edges(){
         Bag<Edge> b = new Bag<>();
         for (int i = 0; i < V; i++)
@@ -51,4 +52,5 @@ public class EdgeWeightedGraph {
             }
         return b;
     }
+
 }

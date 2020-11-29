@@ -1,5 +1,8 @@
 package Chapter_4._3_2;
 
+/**
+ * 带权重无向边
+ */
 public class Edge {
     private final int v;
     private final int w;
