@@ -26,7 +26,6 @@ public class PrimMST {
 
         while (!pq.isEmpty())
             visit(G,pq.delMin());
-
     }
 
     private void visit(EdgeWeightedGraph G,int v){
