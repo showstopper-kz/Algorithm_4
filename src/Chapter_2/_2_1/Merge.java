@@ -1,7 +1,7 @@
 package Chapter_2._2_1;
 
 public class Merge {
-    public static void merge(Comparable[] a,int lo,int mid,int hi){
+    public static void merge(Comparable[] a, int lo, int mid, int hi) {
         /*int i = lo,j = mid+1;
         for(int k=lo;k <= hi;k++)
             aux[k]=a[k];
@@ -16,6 +16,7 @@ public class Merge {
 
     }
 
-    private static boolean less(Comparable v,Comparable w)
-    { return v.compareTo(w)<0;}
+    private static boolean less(Comparable v, Comparable w) {
+        return v.compareTo(w) < 0;
+    }
 }

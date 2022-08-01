@@ -11,7 +11,7 @@ public class test {
         DirectedCycle directedCycle = new DirectedCycle(digraph);
         Iterable<Integer> cycle = directedCycle.cycle();
         for (Integer integer : cycle) {
-            System.out.print(integer+" ");
+            System.out.print(integer + " ");
         }
     }
 }

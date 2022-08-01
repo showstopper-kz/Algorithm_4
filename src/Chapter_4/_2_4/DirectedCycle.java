@@ -15,18 +15,18 @@ public class DirectedCycle {
     //标记此个路径访问过的节点
     private boolean[] onStack;
 
-    public DirectedCycle(Digraph g){
+    public DirectedCycle(Digraph g) {
         onStack = new boolean[g.V()];
         edgeTo = new int[g.V()];
         marked = new boolean[g.V()];
-        for(int v=0;v < g.V();v++)
-            if(!marked[v]) dfs(g,v);
+        for (int v = 0; v < g.V(); v++)
+            if (!marked[v]) dfs(g, v);
     }
 
-    public void dfs(Digraph g, int v){
+    public void dfs(Digraph g, int v) {
         onStack[v] = true;
         marked[v] = true;
-        for(int w:g.adj(v)) {
+        for (int w : g.adj(v)) {
             if (this.hasCycle()) return;
             else if (!marked[w]) {
                 edgeTo[w] = v;
@@ -41,6 +41,11 @@ public class DirectedCycle {
         onStack[v] = false;
     }
 
-    public boolean hasCycle(){ return cycle != null; }
-    public Iterable<Integer> cycle(){ return cycle; }
+    public boolean hasCycle() {
+        return cycle != null;
+    }
+
+    public Iterable<Integer> cycle() {
+        return cycle;
+    }
 }

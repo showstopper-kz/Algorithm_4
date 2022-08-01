@@ -13,6 +13,5 @@ public class test {
             StdDraw.point(i,i*i);
             StdDraw.point(i,i*Math.log(i));
         }*/
-        System.out.println("hello,AliCloud");
     }
 }

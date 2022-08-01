@@ -7,29 +7,32 @@ public class DepthFirstPaths {
     private int[] edgeTo;
     private final int s;//起点
 
-    public DepthFirstPaths(Graph g,int s){
+    public DepthFirstPaths(Graph g, int s) {
         marked = new boolean[g.V()];
         edgeTo = new int[g.V()];
         this.s = s;
     }
 
     //深度搜索
-    private void dfs(Graph g,int v){
+    private void dfs(Graph g, int v) {
         marked[v] = true;
         for (Integer w : g.adj(v)) {
-            if( !marked[w] ){
+            if (!marked[w]) {
                 edgeTo[w] = v;
-                dfs(g,w);
+                dfs(g, w);
             }
         }
     }
 
-    public boolean hasPathTo(int v){return marked[v];}
+    public boolean hasPathTo(int v) {
+        return marked[v];
+    }
+
     //返回起点到v的路径
-    public Iterable<Integer> pathTo(int v){
-        if( !hasPathTo(v) ) return null;
+    public Iterable<Integer> pathTo(int v) {
+        if (!hasPathTo(v)) return null;
         Stack<Integer> path = new Stack<>();
-        for(int x = v;x != s;x = edgeTo[x]) path.push(s);
+        for (int x = v; x != s; x = edgeTo[x]) path.push(s);
         path.push(s);
         return path;
     }

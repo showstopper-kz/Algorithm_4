@@ -17,27 +17,35 @@ public class DepthFirstOrder {
     //逆后序(拓扑排序)
     private Stack<Integer> reversePost;
 
-    public DepthFirstOrder(Digraph g){
+    public DepthFirstOrder(Digraph g) {
         pre = new Queue<Integer>();
         post = new Queue<Integer>();
         reversePost = new Stack<Integer>();
         marked = new boolean[g.V()];
-        for(int v=0;v < g.V();v++)
-            if(!marked[v]) dfs(g,v);
+        for (int v = 0; v < g.V(); v++)
+            if (!marked[v]) dfs(g, v);
     }
 
-    public void dfs(Digraph g,int v){
+    public void dfs(Digraph g, int v) {
         pre.enqueue(v);
         marked[v] = true;
-        for(int w:g.adj(v))
-            if(!marked[w]) dfs(g,w);
+        for (int w : g.adj(v))
+            if (!marked[w]) dfs(g, w);
         post.enqueue(v);
         reversePost.push(v);
     }
 
-    public Iterable<Integer> getPre(){return pre;};
+    public Iterable<Integer> getPre() {
+        return pre;
+    }
 
-    public Iterable<Integer> getPost() { return post; }
+    ;
 
-    public Iterable<Integer> getReversePost() { return reversePost; }
+    public Iterable<Integer> getPost() {
+        return post;
+    }
+
+    public Iterable<Integer> getReversePost() {
+        return reversePost;
+    }
 }

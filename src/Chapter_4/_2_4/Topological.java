@@ -8,14 +8,21 @@ import Chapter_4._2_2.Digraph;
 
 public class Topological {
     private Iterable<Integer> order;
-    public Topological(Digraph g){
+
+    public Topological(Digraph g) {
         DirectedCycle cyclefinder = new DirectedCycle(g);
         //判断是否有环
-        if(!cyclefinder.hasCycle()){
+        if (!cyclefinder.hasCycle()) {
             DepthFirstOrder dfs = new DepthFirstOrder(g);
             order = dfs.getReversePost();
         }
     }
-    public Iterable<Integer> order(){ return order;}
-    public boolean isDAG(){return order != null;}
+
+    public Iterable<Integer> order() {
+        return order;
+    }
+
+    public boolean isDAG() {
+        return order != null;
+    }
 }
