@@ -1,11 +1,15 @@
 package Chapter1._3;
 
+import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 public class Stack<Item> implements Iterable{
     private int N;
     private Node first;
+
+    private int pushOpCnt;
+    private int popOpCnt;
 
     public Stack() {
         N = 0;
@@ -60,6 +64,7 @@ public class Stack<Item> implements Iterable{
         first.item = item;
         first.next = oldFirst;
         N++;
+        pushOpCnt = (pushOpCnt + 1) % 2;
     }
 
     public Item pop() {
@@ -67,6 +72,7 @@ public class Stack<Item> implements Iterable{
         Item res = first.item;
         first = first.next;
         N--;
+        popOpCnt = (popOpCnt + 1) % 2;
         return res;
     }
 
@@ -89,6 +95,17 @@ public class Stack<Item> implements Iterable{
             System.out.println();
         }
     }
+
+    public static void main(String[] args) throws Exception{
+        Stack<String> stack = new Stack<>();
+        for (int i = 0; i < 5; i++) {
+            stack.push(i+"");
+        }
+
+        for (Object o : stack) {
+            stack.push("s");
+        }
+    }
     @Override
     public Iterator iterator() {
         return new ListIterator();
@@ -96,14 +113,22 @@ public class Stack<Item> implements Iterable{
 
     private class ListIterator implements Iterator<Item> {
         private Node current = first;
+        private int currentPushCnt = pushOpCnt;
+        private int currentPopCnt = popOpCnt;
 
         @Override
         public boolean hasNext() {
+            if (pushOpCnt != currentPushCnt || popOpCnt != currentPopCnt) {
+                throw new ConcurrentModificationException("stack has been changed");
+            }
             return current != null;
         }
 
         @Override
         public Item next() {
+            if (pushOpCnt != currentPushCnt || popOpCnt != currentPopCnt) {
+                throw new ConcurrentModificationException("stack has been changed");
+            }
             Item res = current.item;
             current = current.next;
             return res;
