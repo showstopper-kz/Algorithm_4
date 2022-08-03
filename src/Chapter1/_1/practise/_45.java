@@ -49,7 +49,7 @@ public class _45 {
 
     public static void main(String[] args) {
         // boolean res = checkIfUnderFlow("23--3--4324");
-        retType res = checkIfCanGenOrder("12345", "13");
+        retType res = checkIfCanGenOrder("12345", "1235");
         if (res.flag) {
             System.out.println(res.res);
         } else {
