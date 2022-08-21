@@ -1,8 +1,6 @@
 package Chapter1._2;
 
-import edu.princeton.cs.algs4.Accumulator;
-import edu.princeton.cs.algs4.Point2D;
-import edu.princeton.cs.algs4.StdDraw;
+import edu.princeton.cs.algs4.*;
 
 import java.awt.*;
 
@@ -36,6 +34,7 @@ public class VisualAccumulator {
         for (int i = 0; i < 10000; i++) {
             double x = Math.random();
             visualAccumulator.addValue(x);
+            Interval2D
         }
     }
 }
