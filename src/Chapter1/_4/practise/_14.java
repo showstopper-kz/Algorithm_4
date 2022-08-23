@@ -20,6 +20,6 @@ public class _14 {
     }
 
     public static void main(String[] args) {
-
+        System.out.println(FourSum("/Users/zhuyongqi/Projects/IdeaProjects/Algorithm_4/source/1Kints.txt"));
     }
 }

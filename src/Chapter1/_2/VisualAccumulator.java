@@ -34,7 +34,6 @@ public class VisualAccumulator {
         for (int i = 0; i < 10000; i++) {
             double x = Math.random();
             visualAccumulator.addValue(x);
-            Interval2D
         }
     }
 }
